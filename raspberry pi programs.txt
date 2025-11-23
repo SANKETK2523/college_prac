@@ -1,0 +1,95 @@
+a) Read your name and print Hello message with name:
+
+name = input("Enter your name: ")
+print("Hello, " + name + "!")
+
+b) Read two numbers and print their sum, difference, product and division:
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+print("Sum:", a + b)
+print("Difference:", a - b)
+print("Product:", a * b)
+if b != 0:
+	print("Division:", a / b)
+else:
+	print("Division: Cannot divide by zero")
+
+c)Word and character count of a given string:
+
+text = input("Enter a string: ")
+word_count = len(text.split())
+char_count = len(text)
+print("Word count:", word_count)
+print("Character count:", char_count)
+
+d)Area of a given shape (rectangle, triangle and circle) reading shape and appropriate values from standard input:
+
+shape = input("Enter the shape (rectangle/triangle/circle): ").lower()
+if shape == "rectangle":
+	length = float(input("Enter length: "))
+	width = float(input("Enter width: "))
+	area = length * width
+elif shape == "triangle":
+	base = float(input("Enter base: "))
+	height = float(input("Enter height: "))
+	area = 0.5 * base * height
+	elif shape == "circle":
+	radius = float(input("Enter radius: "))
+	area = 3.14159 * radius * radius
+else:
+	area = None
+	print("Invalid shape!")
+if area is not None:
+	print("Area of the", shape, "is:", area)
+
+
+e)Print a name 'n' times, where name and n are read from standard input, using for and while loops:
+
+name = input ("Enter your name: ")
+n = int (input("How many times to print your name? "))
+for i in range(n):
+	print(name)
+
+
+Code using while loop:
+name = input ("Enter your name: ")
+n = int(input("How many times to print your name? "))
+count = 0
+while count < n:
+	print(name)
+	count += 1
+
+
+f)Handle Divided by Zero Exception:
+
+
+try:
+	num1 = float (input ("Enter numerator: "))
+	num2 = float (input ("Enter denominator: "))
+	result = num1 / num2
+	print ("Result:", result)
+except ZeroDivisionError:
+	print ("Error: Cannot divide by zero!")
+
+
+g) Print current time for 10 times with an interval of 10 seconds:
+
+import time
+
+for i in range(10):
+	current_time = datetime.now().strftime("%H:%M:%S")
+	print("Time:", current_time)
+	time.sleep(10) 
+
+
+h)Read a fileline byline and print the word count of each line:
+
+filename = "sample.txt"
+with open(filename, "r") as file:
+line_number = 1
+for line in file:
+	words = line.split() # Split line into words
+	count = len(words)
+	print(f"Line {line_number} has {count} words.")
+	line_number += 1
