@@ -91,7 +91,8 @@ erDiagram
     PERMISSIONS ||--o{ ROLE_PERMISSION : mapped
 
     MODULE ||--o{ PERMISSIONS : has
-```
+
     USERS ||--o{ LOGIN_LOG : generates
     USERS ||--o{ REFRESH_TOKENS : owns
     USERS ||--o{ AUDIT_LOGS : performs
+```
